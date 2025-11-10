@@ -1,0 +1,14 @@
+1)information capacity 
+
+clear; 
+clc; 
+B = 3.4 * 10^3;        
+SNR = 30;              
+// Bandwidth in Hz 
+// Signal-to-noise ratio in dB 
+SN = 10^(SNR/10);      // Convert SNR from dB to linear scale 
+C = B * log2(1 + SN);  // Channel capacity in bits per second 
+printf("Information capacity of telephone channel:\n"); 
+printf("\tSNR (dB) = %.2f dB\n", SNR); 
+printf("\tSNR (linear) = %.2f\n", SN); 
+printf("\tCapacity C = %.2f kbps\n", C/1000); 

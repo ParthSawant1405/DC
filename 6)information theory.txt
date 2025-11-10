@@ -1,0 +1,19 @@
+6)information theory 
+clear; 
+clc; 
+// Given source probabilities 
+px1 = 1/2; 
+px2 = 1/4; 
+px3 = 1/8; 
+px4 = 1/16; 
+px5 = 1/16; 
+// Symbol duration (Tb) 
+Tb = 10^-3; 
+// Step 1: Compute Entropy (reuse same formula) 
+HX = px1*log2(1/px1) + px2*log2(1/px2) + px3*log2(1/px3) + px4*log2(1/px4) + px5*log2(1/px5); 
+// Step 2: Symbol rate r = 1/Tb 
+r = 1 / Tb; 
+// Step 3: Information Rate 
+R = r * HX; 
+printf("\nInformation Rate:\n"); 
+printf("\tR = %.2f bits/sec\n", R);
